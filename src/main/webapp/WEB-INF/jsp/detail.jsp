@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-        <div class="panel panel-default text-center">
+        <div class="panel panel-danger text-center"><%--bootstrap面板--%>
             <div class="pannel-heading">
                 <h1>${seckill.name}</h1>
             </div>
@@ -61,7 +61,7 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<%--使用CDN获取公共js http://www.bootcdn.cn--%>
+<%--使用CDN服务获取公共js http://www.bootcdn.cn--%>
 <%--jquery cookie操作插件--%>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 <%--jquery countdown倒计时插件--%>

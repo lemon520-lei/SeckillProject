@@ -8,9 +8,9 @@
     <%@include file="common/head.jsp"%>
 </head>
 <body>
-<%--页面显示部分--%>
+<%--页面显示部分--%><%--带表格的panel--%>
 <div class="container">
-    <div class="panel panel-default">
+    <div class="panel panel-danger">
         <div class="panel-heading text-center">
             <h2>秒杀列表</h2>
         </div>
@@ -45,7 +45,7 @@
 
                                 </td>
                                 <td>
-                                        <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank">link</a>
+                                        <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank">秒杀</a>
                                 </td>
 
                             </tr>

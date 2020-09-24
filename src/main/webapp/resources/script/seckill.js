@@ -1,8 +1,9 @@
 /** 存放主要交互逻辑js代码
- *  模块化javaScript
+ *  javaScript 模块化
  *
  */
 var seckill={
+    //封装秒杀相关的ajax的url
     URL :{
         now : function () {
             return '/seckill/time/now';
@@ -68,14 +69,14 @@ var seckill={
 
     //计时
     countdown : function(seckillId,nowTime,startTime,endTime){
-        var seckillBox = $('#seckill-box');
+        var seckillBox = $('#seckill-box');//jQuery的id选择器
 
         //时间判断
         if(nowTime > endTime){
             //秒杀结束
             seckillBox.html('秒杀结束！');
         }else if(nowTime < startTime){
-            //Miaosha未开始，计时事件绑定
+            //秒杀未开始，计时事件绑定
             var killTime =new Date(startTime + 1000);
             seckillBox.countdown(killTime,function (event) {
                 //控制时间的格式
@@ -101,7 +102,7 @@ var seckill={
     detail :{
         //详情页初始化inputPhone, {expires: 7}
         init : function (params) {
-            //手机验证和登录  ，计时交互
+            //手机验证和登录，计时交互
             //规划交互流程
             //在cookie中查询手机号
             var killPhone = $.cookie('killPhone');
@@ -109,7 +110,7 @@ var seckill={
 
 
             //验证手机号
-            if(!seckill.validatePhone(killPhone)){
+            if(!seckill.validatePhone(killPhone)){//false
                 //绑定phone
                 //控制输出
                 var killPhoneModal = $('#killPhoneModal');
@@ -122,13 +123,13 @@ var seckill={
                 $('#killPhoneBtn').click(function () {
                     var inputPhone =$('#killPhoneKey').val();
                     console.log('inputPhone='+inputPhone);//TODO
-                    if(seckill.validatePhone(inputPhone)){
+                    if(seckill.validatePhone(inputPhone)){//验证通过
                         //电话写入cookie
                         $.cookie('killPhone',inputPhone,{expires:7,path:'/seckill'});
                         //刷新页面
                         window.location.reload();
                     }else {
-                        $('#killPhoneMessage').hide().html('<label class="label label-danger">手机号错误！</label>').show(300);
+                        $('#killPhoneMessage').hide().html('<label class="label label-danger">请输入正确的手机号~~</label>').show(300);
                     }
                 });
             }

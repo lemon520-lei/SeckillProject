@@ -1,5 +1,6 @@
 package com.lei.dao;
 
+import com.lei.dto.Exposer;
 import com.lei.entity.Seckill;
 import com.lei.entity.SuccessKilled;
 import org.junit.Test;
@@ -56,4 +57,5 @@ public class SuccessKilledDaoTest {
         endTime=Sun Nov 01 00:00:00 CST 2020,
          createTime=Sat May 02 00:00:00 CST 2020}
 * */
+
 }

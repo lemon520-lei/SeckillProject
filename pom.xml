@@ -26,20 +26,22 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.1.1</version>
-    </dependency>
+
     <!--java日志：slf4j，log4j，logback，common-logging-->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.21</version>
     </dependency>
+    <!--实现slf4j接口并整合-->
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
       <version>1.1.1</version>
     </dependency>
     <dependency>
@@ -50,18 +52,21 @@
       <version>5.1.39</version>
       <scope>runtime</scope>
     </dependency>
+    <!--数据库连接池-->
     <dependency>
       <groupId>c3p0</groupId>
       <artifactId>c3p0</artifactId>
       <version>0.9.1.2</version>
     </dependency>
 
+    <!--Dao框架-->
     <!--Mybatis依赖-->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
       <version>3.4.5</version>
     </dependency>
+    <!--mybatis自身实现的spring整合依赖-->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
@@ -75,6 +80,7 @@
       <artifactId>standard</artifactId>
       <version>1.1.2</version>
     </dependency>
+    <!--js默认标签库-->
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
@@ -105,12 +111,15 @@
       <version>4.1.6.RELEASE</version>
     </dependency>
     <dependency>
+      <!--包扫描等-->
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>4.1.6.RELEASE</version>
     </dependency>
+
     <!--2、spring dao层依赖-->
     <dependency>
+      <!--spring提供事务管理器-->
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
       <version>4.1.6.RELEASE</version>
@@ -134,12 +143,40 @@
     </dependency>
 
     <!--4、spring test的相关依赖-->
+    <!--单元测试的需要-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
       <version>4.1.6.RELEASE</version>
     </dependency>
 
+
+    <!--高并发依赖-->
+    <!--Redis客户端：Jedis-->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.7.2</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.dyuproject.protostuff</groupId>
+      <artifactId>protostuff-core</artifactId>
+      <version>1.0.9</version>
+    </dependency>
+    <dependency>
+      <groupId>com.dyuproject.protostuff</groupId>
+      <artifactId>protostuff-runtime</artifactId>
+      <version>1.0.9</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.1</version>
+    </dependency>
 
 
   </dependencies>
